@@ -12,3 +12,9 @@ export function createElement(type, props, ...children) {
 export function useState(defaultValue) {
   return dispatcher.useState(defaultValue);
 }
+
+export function useRef(defaultValue) {
+  return dispatcher.useRef(defaultValue);
+}
+
+

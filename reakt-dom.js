@@ -14,6 +14,14 @@ export function useState(initialValue) {
   return [value, setValue]
 }
 
+export function useRef(initialValue) {
+  if(!hooks[idx]) {
+    hooks[idx] = Object.seal({current: initialValue})
+  }
+
+  return hooks[idx];
+}
+
 
 function renderElement(element) {
   const {type, props, children} = element;

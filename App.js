@@ -1,4 +1,4 @@
-import {createElement as e, useState} from './reakt.js';
+import {createElement as e, useState, useRef} from './reakt.js';
 
 const App = e('div', {},
     e('h1', {}, 'React IO'),
@@ -7,7 +7,14 @@ const App = e('div', {},
 
 function Counter() {
   const [value, setValue] = useState(8);
-  const [value2, setValue2] = useState(value);
+  let value3 = useRef(10);
+
+
+  const plus3 = () => {
+    setValue(value3 + 5);
+    console.log(value3);
+  }
+
 
   const plus = () => {
     setValue(value + 1);
@@ -23,8 +30,10 @@ function Counter() {
 
   return e('div', {},
       e('h2', {}, value.toString()),
+      e('h3', {}, value3.current.toString()),
       e(Button, {label: '+', onClick: plus}, []),
       e(Button, {label: '+2', onClick: plus2}, []),
+      e(Button, {label: '+3', onClick: plus3}, []),
       e(Button, {label: '-', onClick: minus}, []),
   )
 }
