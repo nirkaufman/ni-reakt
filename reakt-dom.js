@@ -2,16 +2,16 @@ let hooks = [];
 let idx = 0;
 
 export function useState(initialValue) {
-  let state = hooks[idx] || initialValue;
+  let value = hooks[idx] || initialValue;
   let _idx = idx;
 
-  function setState(neValue){
-    hooks[_idx] = neValue;
+  function setValue(newValue){
+    hooks[_idx] = newValue;
     render();
   }
 
   idx++;
-  return [state, setState]
+  return [value, setValue]
 }
 
 
@@ -66,4 +66,5 @@ export function render(element = _element, container = _container) {
 
   _currentApp = app;
   idx = 0;
+  console.log(hooks);
 }

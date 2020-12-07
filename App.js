@@ -6,10 +6,15 @@ const App = e('div', {},
 )
 
 function Counter() {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(8);
+  const [value2, setValue2] = useState(value);
 
   const plus = () => {
     setValue(value + 1);
+  }
+
+  const plus2 = () => {
+    setValue2(value2 + 1);
   }
 
   const minus = () => {
@@ -19,6 +24,7 @@ function Counter() {
   return e('div', {},
       e('h2', {}, value.toString()),
       e(Button, {label: '+', onClick: plus}, []),
+      e(Button, {label: '+2', onClick: plus2}, []),
       e(Button, {label: '-', onClick: minus}, []),
   )
 }

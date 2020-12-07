@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cabfb3b-b050-4905-aa2d-5270a0d62915" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dispatcher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reakt-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/reakt-dom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reakt.js" beforeDir="false" afterPath="$PROJECT_DIR$/reakt.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607351398412</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;&quot;">
+      <created>1607353866213</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607353866213</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
