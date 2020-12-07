@@ -1,5 +1,5 @@
 import {createElement as e} from './reakt.js';
-import {render} from "./reakt-dom";
+import {render} from "./reakt-dom.js";
 
 const App = e('div', {},
     e('h1', {}, 'React IO'),
