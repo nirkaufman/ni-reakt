@@ -13,13 +13,25 @@ export function useState(initialValue) {
   idx++;
   return [value, setValue]
 }
-
 export function useRef(initialValue) {
   if(!hooks[idx]) {
     hooks[idx] = Object.seal({current: initialValue})
   }
 
   return hooks[idx];
+}
+export function useEffects(callbackFn, depsArr) {
+  const prevDeps = hooks[idx];
+  let hasChanged = true;
+
+  if(prevDeps) {
+    hasChanged = depsArr.some( (dep, idx) =>
+     !Object.is(dep, prevDeps[idx])
+    )
+  }
+
+  if(hasChanged) callbackFn();
+  hooks[idx] = depsArr;
 }
 
 

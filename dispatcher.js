@@ -1,5 +1,5 @@
-import {useState, useRef} from './reakt-dom.js'
+import {useState, useRef, useEffects} from './reakt-dom.js'
 
 export default {
-  useState, useRef
+  useState, useRef, useEffects
 }

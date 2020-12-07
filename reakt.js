@@ -1,7 +1,11 @@
 import dispatcher from "./dispatcher.js";
 
 export function createElement(type, props, ...children) {
-  const element = {type, props, children};
+  const element = {
+    type,
+    props,
+    children
+  };
 
   Object.freeze(element)
   Object.freeze(element.props)
@@ -15,6 +19,10 @@ export function useState(defaultValue) {
 
 export function useRef(defaultValue) {
   return dispatcher.useRef(defaultValue);
+}
+
+export function useEffects(callback, deps) {
+  return dispatcher.useEffects(callback, deps);
 }
 
 
