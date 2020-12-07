@@ -1,3 +1,20 @@
+let hooks = [];
+let idx = 0;
+
+export function useState(initialValue) {
+  let state = hooks[idx] || initialValue;
+  let _idx = idx;
+
+  function setState(neValue){
+    hooks[_idx] = neValue;
+    render();
+  }
+
+  idx++;
+  return [state, setState]
+}
+
+
 function renderElement(element) {
   const {type, props, children} = element;
 
@@ -36,6 +53,7 @@ function renderElement(element) {
 let _currentApp = null;
 let _element = null;
 let _container = null;
+
 export function render(element = _element, container = _container) {
   const app = renderElement(element);
 
@@ -47,4 +65,5 @@ export function render(element = _element, container = _container) {
       :container.appendChild(app);
 
   _currentApp = app;
+  idx = 0;
 }

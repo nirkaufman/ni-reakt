@@ -1,22 +1,19 @@
-import {createElement as e} from './reakt.js';
-import {render} from "./reakt-dom.js";
+import {createElement as e, useState} from './reakt.js';
 
 const App = e('div', {},
     e('h1', {}, 'React IO'),
-    e(Counter),
+    e(Counter)
 )
 
 function Counter() {
-  let value = 0;
+  const [value, setValue] = useState(0);
 
   const plus = () => {
-    value = value + 1;
-    render();
+    setValue(value + 1);
   }
 
   const minus = () => {
-    value = value - 1;
-    render();
+    setValue(value - 1);
   }
 
   return e('div', {},
